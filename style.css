@@ -1,0 +1,221 @@
+:root {
+  --dark-green: #033e29;
+  --blue: #64b435;
+  --light-green: #e8f5e9;
+  --medium-green: #2e7d32;
+}
+
+/* Navbar */
+.custom-navbar {
+  background: var(--dark-green);
+  transition: 0.3s;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.custom-navbar.scrolled {
+  background: var(--blue);
+}
+.dropdown-menu {
+  background-color: var(--dark-green);
+}
+.dropdown-item {
+  color: white;
+}
+.dropdown-item:hover {
+  background-color: var(--blue);
+  color: white;
+}
+
+/* Hero */
+.hero-section {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+              url('./images/hero\ section.JPG') 
+              center/cover no-repeat;
+  height: 80vh;
+  position: relative;
+}
+
+/* Tips Cards */
+.tip-card {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.tip-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.card-text {
+  flex: 1;
+}
+
+/* Section Backgrounds */
+#tips {
+  background: var(--dark-green);
+}
+#shop {
+  background: var(--blue);
+}
+#tools {
+  background-color: var(--light-green);
+}
+#accessories {
+  background-color: #f8f9fa;
+}
+#books {
+  background-color: var(--light-green);
+}
+
+/* Products */
+.product-card {
+  transition: transform 0.3s;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  height: 100%;
+}
+.product-card:hover {
+  transform: scale(1.03);
+}
+
+/* Modal Styling */
+.modal-header {
+  background-color: var(--dark-green);
+  color: white;
+}
+.modal-footer .btn-primary {
+  background-color: var(--dark-green);
+  border-color: var(--dark-green);
+}
+
+/* Compost Section */
+.compost-section {
+  background-color: var(--light-green);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--dark-green) !important;
+}
+
+/* Logo Styling */
+.logo {
+  max-height: 50px;
+  width: auto;
+  border-radius: 50px;
+}
+
+/* Video Section */
+.video-section {
+  background-color: var(--light-green);
+}
+
+/* Section Headers */
+.section-header {
+  position: relative;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+.section-header:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: var(--blue);
+}
+
+/* Tool Icons */
+.tool-icon {
+  font-size: 2.5rem;
+  color: var(--dark-green);
+  margin-bottom: 15px;
+}
+
+/* Book Cards */
+.book-card {
+  transition: all 0.3s ease;
+  height: 100%;
+}
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Product Categories */
+.category-card {
+  border: none;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Responsive Images */
+.responsive-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Submenu styling */
+.navbar-nav .nav-link {
+  position: relative;
+}
+
+/* Banner styling */
+.banner {
+  background-color: var(--medium-green);
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 60vh;
+  }
+  .display-3 {
+    font-size: 2rem;
+  }
+  .section-header:after {
+    width: 60px;
+  }
+  .tool-icon {
+    font-size: 2rem;
+  }
+}
+
+/* Animation for cards */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
